@@ -1,0 +1,35 @@
+{
+	"name": "kertas-digital/feed-manager",
+	"description": "This will package to fetch feed and create rss feed",
+	"type": "library",
+	"require": {
+			"php": "^7.2",
+			"illuminate/support": "^5.9@dev",
+			"simplepie/simplepie": "dev-master",
+			"ext-curl": "^7.2"
+	},
+	"license": "MIT",
+	"authors": [
+			{
+					"name": "Kertas Digital",
+					"email": "info.kertasdigital@gmail.com"
+			}
+	],
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"KertasDigital\\FeedManager\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"KertasDigital\\FeedManager\\FeedManagerServiceProvider"
+			],
+			"aliases": {
+				"FeedManager": "KertasDigital\\FeedManager\\Facades\\FeedManagerFacades"
+			}
+		}
+	}
+
+}
